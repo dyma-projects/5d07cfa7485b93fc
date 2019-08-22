@@ -19,6 +19,7 @@ export class AddUserComponent implements OnInit {
     const username = this.el.nativeElement.value;
     if (username) {
       this.userService.addUser(username); // on utilise le service ici pour ajouter l'utilisateur;
+      this.error = false;
       this.el.nativeElement.value = '';
     } else {
       this.error = true;
